@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BookReducer from '../reducers/reducer_books';
+import BookReducer from '../reducers/reducerBooks';
 import { connect } from 'react-redux';
 
 

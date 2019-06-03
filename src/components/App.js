@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-import BookList from '../containers/book-list';
-import BookDetailed from '../containers/book-detail';
+import BookList from '../containers/bookList';
+import BookDetailed from '../containers/bookDetail';
 import Test from './Test';
 
 function App() {

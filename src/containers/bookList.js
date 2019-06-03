@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { selectBookAction } from '../actions/select-book-action';
+import { selectBookAction } from '../actions/selectBookAction';
 import { bindActionCreators } from 'redux';
 
 const BookList = (props) => {
