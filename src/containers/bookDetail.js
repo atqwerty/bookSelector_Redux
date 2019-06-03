@@ -6,9 +6,7 @@ import { connect } from 'react-redux';
 const BookDetail = (props) => {
     let bookDetail = props.activeBook.title;
 
-    return (
-        <div>{ bookDetail }</div>
-    )
+    return (bookDetail);
 }       
 
 const mapStateToProps = (state) => {

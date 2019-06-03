@@ -12,7 +12,9 @@ function App() {
       <ul>
         <BookList />
       </ul>
-      <BookDetailed />
+      <div>
+        <BookDetailed />
+      </div>
       <BrowserRouter>
         <Link to="/test">Test</Link> { /* adds 'a' to app */}
         <Route path="/test" component = {Test} />

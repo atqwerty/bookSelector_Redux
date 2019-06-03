@@ -4,11 +4,7 @@ import { selectBookAction } from '../actions/selectBookAction';
 import { bindActionCreators } from 'redux';
 
 const BookList = (props) => {
-    
-    return (
-        // pass props not mapping
-        renderList(props)
-    );
+    return (renderList(props));
 }
 
 const renderList = (props) => {
