@@ -21,12 +21,13 @@ const renderList = (props) => {
     })
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({ selectBook: selectBookAction }, dispatch);
-}
+// const mapDispatchToProps = (dispatch) => {
+//     return bindActionCreators({ selectBook: selectBookAction }, dispatch);
+// }
 
-const mapStateToProps = (state) => {
-    return { books: state.books };
-}
+// const mapStateToProps = (state) => {
+//     return { books: state.books };
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(BookList)
+// export default connect(mapStateToProps, mapDispatchToProps)(BookList)
+export default BookList
