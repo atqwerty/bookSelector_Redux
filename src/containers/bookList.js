@@ -4,7 +4,7 @@ import { selectBookAction } from '../actions/selectBookAction';
 import { bindActionCreators } from 'redux';
 
 const BookList = (props) => {
-    return (renderList(props));
+    return renderList(props);
 }
 
 const renderList = (props) => {
@@ -26,7 +26,7 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 const mapStateToProps = (state) => {
-    return { books: state.books }
+    return { books: state.books };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(BookList)
