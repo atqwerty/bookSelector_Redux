@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
+import BookReducer from '../reducers/reducer_books';
 import { connect } from 'react-redux';
 
-function BookDetail(props) {
-    let bookDetail = "No Book Selected!";
-    if(props.activeBook) {
-        bookDetail = props.activeBook.title;
-    }
+
+const BookDetail = (props) => {
+    let bookDetail = props.activeBook.title;
+
     return (
         <div>{ bookDetail }</div>
     )
-}
+}       
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
     return { activeBook: state.activeBook }
 }
 

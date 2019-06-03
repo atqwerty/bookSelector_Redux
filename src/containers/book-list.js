@@ -3,33 +3,43 @@ import { connect } from 'react-redux';
 import { selectBookAction } from '../actions/select-book-action';
 import { bindActionCreators } from 'redux';
 
-function BookList(props) {
-    const renderList = () => {
-        return props.books.map( book => {
+const BookList = (props) => {
+    
+    return (
+        // pass props not mapping
+        props.books.map( book => {
             return (
                 <li
-                    key = { book.title }
-                    onClick = { () => props.selectBook(book) }
-                    className = "list-group-item"
+                key = { book.title }
+                onClick = { () => props.selectBook(book) }
+                className = "list-group-item"
                 >
                     { book.title }
                 </li>
-            )
+            );
         })
-    };
-
-    return (
-        <ul className = "list-group">
-            { renderList() }
-        </ul>
     );
 }
 
-function mapDispatchToProps(dispatch) {
+// const renderList = (props) => {
+//     return props.books.map( book => {
+//         return (
+//             <li
+//                 key = { book.title }
+//                 onClick = { () => props.selectBook(book) }
+//                 className = "list-group-item"
+//             >
+//                 { book.title }
+//             </li>
+//         )
+//     })
+// };
+
+const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({ selectBook: selectBookAction }, dispatch);
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
     return { books: state.books }
 }
 
